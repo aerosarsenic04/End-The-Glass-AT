@@ -5,13 +5,16 @@
 
 define an = Character("castiael", color="#ffffff")
 define m = Character("moros", color="#ffffff")
+define y = Character("[name]", color="#a4c6c0")
+default persistent.content_warning = False
 
 
-# The game starts here.
+# The game starts here. 
 
 label start:
 
     $ angel_trigger = False
+
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
@@ -24,6 +27,43 @@ label start:
 
     show eileen happy
 
+    if persistent.content_warning = True:
+        jump game_start
+
+    "Before beginning, please ensure you understand the content warnings for this game."
+    "This game contains themes of suicidal ideation, depression, religious imagery, blood and self-harm."
+    "Would you like to see the detailed list of warnings? (spoilers)"
+
+    menu:
+        "yes":
+            jump cwdetailed
+        "no":
+            jump contin
+
+
+label cwdetailed:
+
+    "Game contains depiction of self mutilation via wing amputation, extreme nihilism, heavily existential themes, implied suicide (1/3 endings)."
+    "Please understand that the main character struggles heavily with mental illness."
+    "This game does not have a happy ending"
+
+    jump contin
+
+
+label contin:
+
+    $ persistent.content_warning = True
+
+    "Would you like to play?"
+
+    menu:
+        "yes":
+            jump game_start
+        "no":
+            $ renpy.quit()
+
+
+label game_start:
     # These display lines of dialogue.
     "you wake."
     an "hello. you must be..."
@@ -39,7 +79,7 @@ label start:
         an "..."
         an "..."
         an "you should leave"
-        an "now"
+        an "{font=fonts/Esteban.ttf}{color="#c40404"}now{/font}{/color}"
         $ angel_trigger = True
         $ renpy.quit()
 
@@ -50,10 +90,10 @@ label start:
         an "i haven't paid for my sins"
         an "i don't deserve this blessing"
         an "this... this gift."
-        an "the lord has been merciful"
-        an "the lord has been merciful"
-        an "the lord has been merciful"
-        an "the lord has been merciful"
+        an "{font=fonts/Esteban.ttf}the lord has been merciful{/font}"
+        an "{font=fonts/Esteban.ttf}the lord has been merciful{/font}"
+        an "{font=fonts/Esteban.ttf}the lord has been merciful{/font}"
+        an "{font=fonts/Esteban.ttf}the lord has been merciful{/font}"
         an "i have not been merciful"
         an "judgement is here to condemn me"
         an "i must pay for my sins"
