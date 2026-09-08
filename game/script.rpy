@@ -27,7 +27,7 @@ label start:
 
     show eileen happy
 
-    if persistent.content_warning = True:
+    if persistent.content_warning:
         jump game_start
 
     "Before beginning, please ensure you understand the content warnings for this game."
@@ -79,7 +79,7 @@ label game_start:
         an "..."
         an "..."
         an "you should leave"
-        an "{font=fonts/Esteban.ttf}{color="#c40404"}now{/font}{/color}"
+        an '{font=fonts/Esteban.ttf}{color=#c40404}now{/color}{/font}'
         $ angel_trigger = True
         $ renpy.quit()
 
