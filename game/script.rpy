@@ -152,6 +152,15 @@ label Find_wings:
     "You almost utter an 'are you okay?' but it dies on your lips. There is nothing you can say that will change anything..."
     an "it's okay, [name]"
     an "the lord will grant me freedom"
+    an "i won't hurt anymore"
+    "He's lying, you can see through it now. The angel has tears rolling down his blood-stained face, his previous composure is shattered."
+    y "Castiael, put the shears down."
+    an "i..."
+    an "okay, [name]"
+    "The shears clatter onto the tile, splattering blood on the tiles near your feet"
+    "You can see Castiael start to tremble."
+    y "It's... It's fine, Castiael. Everything is fine. Just... Come on, we need to stop the bleeding."
+    
     # This ends the game.
 
     return
