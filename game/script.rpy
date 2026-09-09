@@ -62,7 +62,7 @@ label contin:
         "no":
             $ renpy.quit()
 
-
+#SECTION - Game actually starts here; name input
 label game_start:
     # These display lines of dialogue.
     "you wake."
@@ -102,6 +102,56 @@ label game_start:
         $ angel_trigger = True
         $ renpy.quit()
 
+    y "... Where am I? What is this?"
+    y "I don't remember falling asleep here."
+    an "oh... my apologies for the inconvenience."
+    an "This is... a house?"
+    "You look around... This is definitely YOUR home"
+    y "you... who are you? why are you in my home!?"
+    "You get up"
+    an "I am Castiael! I am an angel sent to watch over you."
+    an "Your hardships have not been unseen"
+    y "I..."
+    "You pause... this person sounds crazy, but there's an unexplicable ease in their voice."
+    "They do seem inexplicably angelic... but you could be imagining that."
+
+#TODO - Option to uhhhh make sure cas is an angel.
+# Their eyes are bright
+
+    y "I still think you might be mistaken; I don't... believe."
+    an "Belief is not required for me to safeguard you... you humans have this concept of guardian angels, and I suppose I can assume that role."
+
+#TODO - OPT to yes or no angel... you get stuck with cas anyways
+    y "I don't need a guardian angel."
+
+    an "Please teach me well."
+
+
+
+
+label Find_wings:
+    "You wake... paranoid."
+    "There is an inexplicable terror in your chest."
+    "You can't help but feel that if you go to sleep again, you might not wake."
+    "You breathe deeply and get out of bed."
+    "This is not anything you've felt before..."
+
+
+    "You enter the bathroom"
+    an "[name]"
+    an "aren't my wings beautiful?"
+    an "please"
+    an "they're beautiful right?"
+    "You can hear your own breath."
+    "What... what are you even supposed to do?"
+    "The bathroom is covered in blood"
+    "Your shears are in Castiael's steady hand"
+    "His back is a bloodied, hacked mess. The blood soaked towel-like lumps seem to be what remains of his wings on the cold tiled floor."
+    y "Castiael..."
+    y "What are you..."
+    "You almost utter an 'are you okay?' but it dies on your lips. There is nothing you can say that will change anything..."
+    an "it's okay, [name]"
+    an "the lord will grant me freedom"
     # This ends the game.
 
     return
