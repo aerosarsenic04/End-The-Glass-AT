@@ -43,7 +43,7 @@ label start:
 
 label cwdetailed:
 
-    "Game contains depiction of self mutilation via wing amputation, extreme nihilism, heavily existential themes, implied suicide (1/3 endings)."
+    "Game contains depiction of self mutilation via wing amputation and eye gouging, extreme nihilism, heavily existential themes, implied suicide (1/3 endings), panic attacks and mental distress."
     "Please understand that the main character struggles heavily with mental illness."
     "This game does not have a happy ending"
 
@@ -159,6 +159,13 @@ label Find_wings:
     an "okay, [name]"
     "The shears clatter onto the tile, splattering blood on the tiles near your feet"
     "You can see Castiael start to tremble."
+    menu:
+        "help him":
+            jump help_wings
+        "leave the bathroom":
+            jump no_help_wings
+
+    label help_wings:
     y "It's... It's fine, Castiael. Everything is fine. Just... Come on, we need to stop the bleeding."
     
     # This ends the game.
