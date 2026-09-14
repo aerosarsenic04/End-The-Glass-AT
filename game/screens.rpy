@@ -321,6 +321,8 @@ screen navigation():
 
         textbutton _("About") action ShowMenu("about")
 
+        textbutton _("Credits") action ShowMenu("credits_screen")
+
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
@@ -810,6 +812,8 @@ screen preferences():
                             action Preference("all mute", "toggle")
                             style "mute_all_button"
 
+            textbutton _("Credits") action ShowMenu("credits_screen")
+
 
 style pref_label is gui_label
 style pref_label_text is gui_label_text
@@ -1137,6 +1141,29 @@ style help_label_text:
 ################################################################################
 ## Additional screens
 ################################################################################
+screen credits_screen():
+    tag menu
+    use game_menu(_("Credits"), scroll="viewport"):
+        style_prefix "credits"
+        hbox:
+            spacing 50
+            vbox:
+                xsize 0.5
+                text "Disclaimer: All events and character experiences are solely based off my own real life experiences with my mental health and are not meant to be reflective or characteristic of any other person or persons\nHowever, if there are any changes that you as a player believe are necessary, please reach out." color "#d10404"
+                text "Team" color "#ffffff"
+                text "developer: mo"
+                text "artist: mo"
+                text "writer: mo"
+                text "hi guys this is mo, my name is Selina Tung and i hope you enjoy(ed) my game." color "#275532"
+
+            vbox:
+                text "special thanks"
+                text "- my friends for helping me with this project and allowing me to bounce my ideas off of them"
+                text "- my sister for telling me about her experiences with religion"
+
+
+            
+
 
 
 ## Confirm screen ##############################################################
