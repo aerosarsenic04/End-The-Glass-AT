@@ -1139,7 +1139,7 @@ style help_label_text:
 
 
 ################################################################################
-## Additional screens
+## Additional screens //SECTION - Credis and like yea
 ################################################################################
 screen credits_screen():
     tag menu
