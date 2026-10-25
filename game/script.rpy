@@ -5,6 +5,7 @@
 
 define an = Character("castiael", color="#ffffff")
 define m = Character("moros", color="#ffffff")
+define e = Character("emrys", color="#ffffff")
 define y = Character("[name]", color="#a4c6c0")
 default persistent.content_warning = False
 
@@ -14,6 +15,7 @@ default persistent.content_warning = False
 label start:
 
     $ angel_trigger = False
+    #for if uh you trigger smth in a past playthru, there is special dialogue
 
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
@@ -75,6 +77,15 @@ label game_start:
     if not name:
         $name = "{REDACTED}"
 
+    if angel_trigger == True:
+        an "..."
+        an "why are you back again?"
+        an "do you enjoy my repeated suffering?"
+        an "again, again, again, again, again, again, again, again, again, again, again, again, again, again, again, again, again, again, again, again"
+        an "you just can't stop clicking that play button, can you?"
+        an "i dont blame you."
+        an "i hope you find entertainment in my suffering."
+
     if name.lower() == "angel":
         an "..."
         an "..."
@@ -129,7 +140,7 @@ label game_start:
 
 
 
-label Find_wings:
+label Find_wings: #TODO - POLISH POLISH
     "You wake... paranoid."
     "There is an inexplicable terror in your chest."
     "You can't help but feel that if you go to sleep again, you might not wake."
@@ -168,6 +179,37 @@ label Find_wings:
     label help_wings:
     y "It's... It's fine, Castiael. Everything is fine. Just... Come on, we need to stop the bleeding."
     
+
+
+
+
+    label snapped:
+        an "[name]..."
+        an "you were right"
+        an "it isn't my fault at all"
+        an "the lord has acted mercifully"
+        an "i simply did not understand"
+        an "but now..."
+        an "the lord wishes for me to be free of this suffering"
+        an "this suffering that humans have inflicted upon US"
+        an "he wishes that i cleanse this plague of sin"
+        an "the lord is merciful, and i must carry out his will"
+        an "don't worry [name], {i}you{/i} are pure"
+        an "the lord has blessed you, and so you shall remain."
+        an "don't worry. i will redeem them all"
+
+
+        play sound "audio/radiostatic.mp3"
+        m "THIS JUST IN"
+        m "THERE {i}APPEARS{/i} TO BE A SERIOUS ISSUE IN THE CITY"
+        m "A STRANGE FLYING ENTITY HAS BEEN SPOTTED"
+        m "CAUSING MASS DESTRUCTION"
+        m "ONLOOKERS BELIEVE IT TO BE AN ANGEL, AND SEEM TO BE HAVING HALLUCINATIONS"
+        m "DEFENSE ATTEMPTS SEEM TO BE INEFFECTIVE; THE ENTITY IS UNSTOPPABLE"
+        m "I'm not even going to lie guys, there's no point in hiding or driving away this thing is crazy."
+        m "WE ARE FUCKED"
+        m "I REPEAT, WE ARE ALL FUCKED"
+        m "This was your local evening news, now back to your regularly scheduled programming."
     # This ends the game.
 
     return
